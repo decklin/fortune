@@ -1,0 +1,10 @@
+{
+  "name": "Fortune",
+  "version": "1.0",
+  "description": "Display text fortune cookies on the New Tab Page",
+  "background_page": "background.html",
+  "options_page": "options.html",
+  "chrome_url_overrides": {
+    "newtab": "ntp.html"
+  }
+}
