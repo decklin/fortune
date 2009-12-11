@@ -2,6 +2,10 @@
   "name": "Fortune",
   "version": "1.0",
   "description": "Display text fortune cookies on the New Tab Page",
+  "icons": {
+    "32": "fortune-cookie-32.png",
+    "48": "fortune-cookie-48.png"
+  },
   "background_page": "background.html",
   "options_page": "options.html",
   "chrome_url_overrides": {
