@@ -2,37 +2,23 @@
 
 <html>
 <head>
-<title>Fortune Options</title>
-<script>
-var fields = [
-    'fortunes', 'font', 'backgroundFrom', 'backgroundTo'
-];
-function loadLocal(k) {
-    document.getElementById(k).value = localStorage[k];
-}
-function saveLocal(k) {
-    localStorage[k] = document.getElementById(k).value;
-}
-function load() {
-    fields.forEach(loadLocal);
-}
-function save() {
-    fields.forEach(saveLocal);
-}
-</script>
+  <title>Fortune Options</title>
+  <script src="options.js"></script>
 </head>
 <body onload="load();">
-<h1>Edit Fortunes</h1>
-<p>Paste your fortunes here. For links to several good collections of
-  fortunes, see
-  the <a href="http://en.wikipedia.org/wiki/Fortune_(Unix)">Wikipedia
-  article</a> on the Unix <tt>fortune(1)</tt> program. Or, enter your
-  own favorite collection of quotations, using a line consisting of a
-  single percent sign ("%") to separate them.</p>
-<p><textarea cols="80" rows="24" id="fortunes"></textarea></p>
-<p>Font (CSS style): <input type="text" id="font" /></p>
-<p>Color 1 (top of gradient): <input type="text" id="backgroundFrom" /></p>
-<p>Color 2 (bottom of gradient): <input type="text" id="backgroundTo" /></p>
-<p><input type="button" onclick="save();" value="Save" /></p>
+  <h1>Edit Fortunes</h1>
+  <p>
+    Paste your fortunes here. For links to several
+    good collections of fortunes, see the <a
+    href="http://en.wikipedia.org/wiki/Fortune_(Unix)">Wikipedia
+    article</a> on the Unix <tt>fortune(1)</tt> program. Or, enter your
+    own favorite collection of quotations, using a line consisting of a
+    single percent sign ("%") to separate them.
+  </p>
+  <p><textarea cols="80" rows="24" id="fortunes"></textarea></p>
+  <p>Font (CSS style): <input type="text" id="font" /></p>
+  <p>Color 1 (top of gradient): <input type="text" id="backgroundFrom" /></p>
+  <p>Color 2 (bottom of gradient): <input type="text" id="backgroundTo" /></p>
+  <p><input type="button" onclick="save();" value="Save" /></p>
 </body>
 </html>
