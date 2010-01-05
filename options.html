@@ -3,6 +3,7 @@
 <html>
 <head>
   <title>Fortune Options</title>
+  <link rel="stylesheet" href="common/options.css" />
   <script src="options.js"></script>
 </head>
 <body onload="load();">
@@ -16,9 +17,30 @@
     single percent sign ("%") to separate them.
   </p>
   <p><textarea cols="80" rows="24" id="fortunes"></textarea></p>
-  <p>Font (CSS style): <input type="text" id="font" /></p>
-  <p>Color 1 (top of gradient): <input type="text" id="backgroundFrom" /></p>
-  <p>Color 2 (bottom of gradient): <input type="text" id="backgroundTo" /></p>
-  <p><input type="button" onclick="save();" value="Save" /></p>
+  <h2>Settings</h2>
+  <div class="option">
+    <p class="label">Font:</p>
+    <input type="text" class="css" id="font" name="font" />
+    <p class="description">
+      for example, <code>21px "Inconsolata", monospace</code>
+    </p>
+  </div>
+  <div class="option">
+    <p class="label">Color 1:</p>
+    <input type="text" class="color" id="backgroundFrom" name="bg1" />
+    <p class="description">
+      top of gradient
+    </p>
+  </div>
+  <div class="option">
+    <p class="label">Color 2:</p>
+    <input type="text" class="color" id="backgroundTo" />
+    <p class="description">
+      bottom of gradient
+    </p>
+  </div>
+  <div class="actions">
+    <p><input type="button" onclick="save();" value="Save Options" /></p>
+  </div>
 </body>
 </html>
