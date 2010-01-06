@@ -11,5 +11,6 @@ function init() {
     with (document.getElementById('fortune')) {
         innerText = randomFortune(localStorage['fortunes']);
         style.font = localStorage['font'];
+        style.color = localStorage['color'];
     }
 }

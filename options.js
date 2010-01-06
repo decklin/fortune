@@ -1,5 +1,5 @@
 var fields = [
-    'fortunes', 'font', 'backgroundFrom', 'backgroundTo'
+    'fortunes', 'font', 'color', 'backgroundFrom', 'backgroundTo'
 ];
 
 function loadLocal(k) {
