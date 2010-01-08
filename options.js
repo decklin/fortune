@@ -1,16 +1,15 @@
-var fields = [
+var options = [
     'fortunes', 'font', 'color', 'backgroundFrom', 'backgroundTo'
 ];
 
-function loadLocal(k) {
-    document.getElementById(k).value = localStorage[k];
+function init() {
+    options.forEach(function(k) {
+        document.getElementById(k).value = config.get(k);
+    });
 }
-function saveLocal(k) {
-    localStorage[k] = document.getElementById(k).value;
-}
-function load() {
-    fields.forEach(loadLocal);
-}
+
 function save() {
-    fields.forEach(saveLocal);
+    options.forEach(function(k) {
+        config.set(k, document.getElementById(k).value);
+    });
 }
