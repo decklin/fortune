@@ -6,11 +6,11 @@ function randomFortune(text) {
 
 function init() {
     document.body.style.background = '-webkit-gradient(linear,0 0,0 100%,' +
-        'from(' + localStorage['backgroundFrom'] + '),' +
-        'to(' + localStorage['backgroundTo'] + '))';
-    with (document.getElementById('fortune')) {
-        innerText = randomFortune(localStorage['fortunes']);
-        style.font = localStorage['font'];
-        style.color = localStorage['color'];
-    }
+        'from(' + config.get('backgroundFrom') + '),' +
+        'to(' + config.get('backgroundTo') + '))';
+
+    var fortune = document.getElementById('fortune');
+    fortune.innerText = randomFortune(config.get('fortunes'));
+    fortune.style.font = config.get('font');
+    fortune.style.color = config.get('color');
 }
