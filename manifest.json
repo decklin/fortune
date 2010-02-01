@@ -1,6 +1,6 @@
 {
   "name": "Fortune",
-  "version": "1.4",
+  "version": "1.5",
   "description": "Display text fortune cookies on the New Tab Page",
   "icons": {
     "32": "fortune-cookie-32.png",
